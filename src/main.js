@@ -116,7 +116,19 @@ function togglePlay() {
     }
 }
 
+
+// Progress Bar Animation
+function animateProgress() {
+    gsap.fromTo('.progress-fill',
+        { width: '0%' },
+        {
+            width: '100%', duration: 30, ease: 'none', onComplete: () => {
+                togglePlay(); // Stop when done
+            }
+        }
+    );
 }
+
 
 // Scroll Animation Observer
 const observerOptions = {
