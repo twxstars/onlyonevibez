@@ -1533,4 +1533,133 @@ select:focus {
     .beats-container {
         flex-direction: column;
     }
+}/* --- CONSOLIDATED MOBILE OVERHAUL (Force Patch) --- */
+@media (max-width: 900px) {
+
+    /* 1. GLOBAL LAYOUT RESET */
+    .profile-container,
+    .spotlight-container,
+    .footer-content,
+    .hero-section,
+    .beats-container,
+    .section-header,
+    .services-grid,
+    .highlights-grid {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 3rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* 2. HERO SECTION FIXES */
+    .hero-section {
+        height: auto;
+        /* Allow natural flow */
+        min-height: auto;
+        padding-top: 120px;
+        /* Header clearance */
+        padding-bottom: 4rem;
+        flex-direction: column-reverse !important;
+        /* Image on top/middle, text bottom */
+        display: flex;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.8rem;
+        border: none;
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Force Image Display & Sizing */
+    .visual-placeholder {
+        display: block !important;
+        width: 100%;
+        height: 350px;
+        /* Fixed height for mobile */
+        margin-bottom: 2rem;
+        border-radius: 15px;
+    }
+
+    /* 3. SECTION SPECIFICS */
+
+    /* Profile / About */
+    .profile-image-wrapper {
+        width: 100%;
+        height: 300px;
+    }
+
+    .profile-stats {
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    /* Spotlight */
+    .spotlight-container {
+        flex-direction: column-reverse !important;
+    }
+
+    .spotlight-visual {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .spotlight-title {
+        font-size: 3rem;
+    }
+
+    /* Beats Table - Horizontal Scroll */
+    .licensing-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        /* Enable scroll */
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+    }
+
+    .licensing-table {
+        min-width: 500px;
+        /* Force min width to trigger scroll */
+    }
+
+    /* Contact Form & Footer */
+    .contact-form,
+    .about-module {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Music Player Mobile */
+    .music-player {
+        width: 95%;
+        bottom: 1rem;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .track-details {
+        max-width: 100px;
+        /* Truncate if needed */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
