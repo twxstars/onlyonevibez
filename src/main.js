@@ -53,21 +53,36 @@ const tracks = [
     { id: 4, title: "AFRO SOUL", year: "2023", image: "https://images.unsplash.com/photo-1547037579-f0fc020ac3be?auto=format&fit=crop&q=80&w=300" },
 ];
 
-const discographyGrid = document.getElementById('discography-grid');
-const player = document.getElementById('music-player');
-const playerArtist = player.querySelector('.artist-name');
-const playerTrack = player.querySelector('.track-name');
+// Render Tracks (Discography)
+if (discographyGrid) {
+    tracks.forEach(track => {
+        const card = document.createElement('div');
+        card.className = 'artist-card';
+        card.innerHTML = `
+      <img src="${track.image}" alt="${track.title}" class="artist-image" loading="lazy">
+      <div class="artist-info">
+        <span class="artist-genre">${track.year}</span>
+        <h3 class="artist-name" style="color: white; font-size: 1.2rem;">${track.title}</h3>
+        <button class="cta-button primary small spotify-btn" style="padding: 8px 16px; font-size: 10px;">
+           SPOTIFY
+        </button>
+      </div>
+    `;
+
+        // Interaction
+        card.addEventListener('mouseenter', () => {
+            gsap.to(cursor, { scale: 1.5, borderColor: '#D4AF37', duration: 0.3 });
         });
 
-card.addEventListener('mouseleave', () => {
-    gsap.to(cursor, { scale: 1, borderColor: '#E0E0E0', duration: 0.3 });
-});
+        card.addEventListener('mouseleave', () => {
+            gsap.to(cursor, { scale: 1, borderColor: '#E0E0E0', duration: 0.3 });
+        });
 
-card.addEventListener('click', () => {
-    openPlayer(track);
-});
+        card.addEventListener('click', () => {
+            openPlayer(track);
+        });
 
-discographyGrid.appendChild(card);
+        discographyGrid.appendChild(card);
     });
 }
 
