@@ -116,13 +116,26 @@ function togglePlay() {
     }
 }
 
-function animateProgress() {
-    gsap.fromTo('.progress-fill',
-        { width: '0%' },
-        {
-            width: '100%', duration: 30, ease: 'none', onComplete: () => {
-                togglePlay(); // Stop when done
-            }
-        }
-    );
 }
+
+// Scroll Animation Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Elements to animate
+document.querySelectorAll('.service-card, .artist-card, .testimonial-card, .section-title, .hero-content, .highlight-item, .beat-title').forEach(el => {
+    observer.observe(el);
+});
+
+console.log('UI Animations Initialized');
