@@ -1,0 +1,22 @@
+:root {
+  /* Colors */
+  --bg-onyx: #030303;
+  --bg-onyx-glass: rgba(3, 3, 3, 0.85);
+  --accent-violet: #7F00FF;
+  --accent-violet-dim: rgba(127, 0, 255, 0.4);
+  --text-premium: #E0E0E0;
+  --text-muted: #888888;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  
+  /* Fonts */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Space Grotesk', monospace;
+
+  /* Spacing */
+  --nav-height: 80px;
+  --player-height: 90px;
+  
+  /* Effects */
+  --glass-blur: blur(12px);
+  --ease-premium: cubic-bezier(0.23, 1, 0.32, 1);
+}

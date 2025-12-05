@@ -1,63 +1,16 @@
-# OnlyOneVibez - Premium Music Portfolio
+# React + Vite
 
-![OnlyOneVibez Banner](https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1200&auto=format&fit=crop)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> "Afro-Luxe" Digital Experience for Nigeria's Premier Sound.
+Currently, two official plugins are available:
 
-## 🎵 About The Project
-**OnlyOneVibez** is a high-end music portfolio website designed with the **"Eko Nocturne"** aesthetic—capturing the sophisticated, dark, and vibrant energy of Lagos nightlife. It serves as the digital home for the artist **OnlyOneVibez**.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Key Features
-- **Premium Dark Mode**: "Obsidian Black" theme with Gold and Electric Green accents.
-- **Glassmorphism UI**: Modern, translucent interface elements.
-- **Magnetic Interactions**: Custom cursor and physics-based button hovers.
-- **Continuous Audio**: Floating music player that persists across the experience.
-- **Responsive Design**: Mobile-first approach for fans on the go.
+## React Compiler
 
-## 🛠 Tech Stack
-- **Core**: HTML5, Modern CSS3 (Variables, Flexbox/Grid)
-- **Scripting**: Vanilla JavaScript (ES6+)
-- **Build Tool**: Vite
-- **Animations**: GSAP (GreenSock Animation Platform)
-- **Smooth Scroll**: Lenis
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 📂 Project Structure
-```
-onlyonevibez/
-├── src/
-│   ├── styles/
-│   │   └── main.css      # Global styles & Eko Nocturne theme
-│   └── main.js           # Interactions, Data, & Logic
-├── index.html            # Main entry point
-├── package.json          # Dependencies & Scripts
-└── vite.config.js        # Vite Configuration
-```
+## Expanding the ESLint configuration
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-
-### Installation
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/rahmon-tech/onlyonevibez.git
-    cd onlyonevibez
-    ```
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-3.  **Start local server**
-    ```bash
-    npm run dev
-    ```
-    The site will launch at `http://localhost:5173`.
-
-## 🖼 Image Credits
-All images used are royalty-free from **Unsplash**.
-- Hero Background: [Unsplash](https://unsplash.com/photos/man-singing-on-stage-A-obRhP0c0k)
-- Profile Shots: Various Unsplash artists.
-
-## 📄 License
-This project is proprietary to **rahmon-tech**.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
